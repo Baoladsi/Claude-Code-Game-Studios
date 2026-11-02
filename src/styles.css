@@ -62,8 +62,9 @@ canvas#game { position: fixed; inset: 0; width: 100vw; height: 100vh; display: b
 .banner.break .banner-title { color: #ff9f1c; }
 .banner.worldfirst .banner-title { color: var(--gold); text-shadow: 0 0 30px var(--gold); }
 .banner.skill .banner-title { color: #00ffdc; }
-.screen { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 40%, rgba(20, 40, 70, 0.75), rgba(0, 0, 0, 0.9)); padding: 16px; }
+.screen { cursor: default; position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 40%, rgba(20, 40, 70, 0.75), rgba(0, 0, 0, 0.9)); padding: 16px; }
 .screen.show { display: flex; }
+#screen-title { cursor: pointer; }
 .card { max-width: 760px; width: 100%; padding: 28px 32px; text-align: center; background: var(--panel); border: 1px solid var(--holo-dim); border-radius: 14px; box-shadow: 0 0 40px rgba(125, 249, 255, 0.15); }
 .kicker { letter-spacing: 4px; font-size: 12px; color: var(--holo); }
 .kicker.gold { color: var(--gold); font-weight: 800; font-size: 16px; }

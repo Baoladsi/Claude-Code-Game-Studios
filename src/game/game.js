@@ -35,6 +35,11 @@ export class Game {
     };
     doc.getElementById('vignette-intro').innerHTML = VIGNETTES.intro.map((l) => `<p>${l}</p>`).join('');
     globalThis.addEventListener('resize', () => this.renderer.resize());
+    // Clicking the title also starts (and gives keyboard focus when embedded in an iframe).
+    this.screens.title.addEventListener('click', () => {
+      globalThis.focus();
+      if (this.state === 'title') this.begin();
+    });
     this.wireEvents();
     this.applyScene(opts.scene);
   }
