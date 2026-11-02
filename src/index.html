@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aetherfall Online — Vertical Slice</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <section class="panel vitals">
+      <div class="who">KAI <span class="dim">· Lv 1 · trash-game veteran</span></div>
+      <div class="bar hp"><div id="hp-fill"></div><span id="hp-text"></span></div>
+      <div class="bar st"><div id="st-fill"></div></div>
+      <div class="bar gl"><div id="gl-fill"></div><span id="gl-label">GLITCH INSTINCT</span></div>
+      <div id="weapon"></div>
+      <div id="skills" class="dim small"></div>
+    </section>
+
+    <section class="style">
+      <div id="rank">D</div>
+      <div class="rank-bar"><div id="rank-fill"></div></div>
+      <div id="combo"></div>
+    </section>
+
+    <section id="boss" class="panel">
+      <div class="boss-top"><span class="tag-unique">UNIQUE</span> <b id="boss-name"></b> <span id="boss-phase"></span></div>
+      <div class="bar boss-bar"><div id="boss-fill"></div><i class="mark"></i></div>
+      <div class="boss-bottom"><span id="boss-part"></span><span id="boss-call"></span></div>
+    </section>
+
+    <ul id="feed" class="panel"></ul>
+    <section id="inventory" class="panel small"></section>
+    <div id="banner" class="banner"></div>
+    <div class="hint small dim">WASD move · Space dodge · J/LMB light · K/RMB heavy · Shift/L guard-parry · Q swap (mid-combo = Switch Cancel) · E Glitch Instinct · Esc pause</div>
+  </div>
+
+  <div id="screen-title" class="screen">
+    <div class="card">
+      <div class="kicker">FULL-DIVE VRMMO · VERTICAL SLICE</div>
+      <h1>AETHERFALL <span>ONLINE</span></h1>
+      <div class="subtitle">The Unbeaten Seven — Hunt I: The Antlered Warden</div>
+      <div id="vignette-intro" class="vignette"></div>
+      <div class="controls">
+        <div><b>WASD</b> move</div><div><b>Space</b> dodge — time it right for <em>Just Evade</em></div>
+        <div><b>J / Left click</b> light combo</div><div><b>K / Right click</b> heavy (finisher after lights)</div>
+        <div><b>Shift / L</b> guard — tap just before a hit to <em>Parry</em></div><div><b>Q</b> swap weapon (in recovery = <em>Switch Cancel</em>)</div>
+        <div><b>E</b> Glitch Instinct: see TRUE hitboxes</div><div>Orange telegraph = parryable · Magenta = dodge it</div>
+      </div>
+      <div class="press">Press <b>Enter</b> to Full-Dive</div>
+    </div>
+  </div>
+
+  <div id="screen-pause" class="screen"><div class="card"><h2>PAUSED</h2><p>Esc to resume.</p></div></div>
+  <div id="screen-death" class="screen">
+    <div class="card"><h2 class="red">YOU DIED</h2><p>The forum has already noticed.</p><div class="press">Enter: respawn at checkpoint · R: restart</div></div>
+  </div>
+  <div id="screen-victory" class="screen">
+    <div class="card">
+      <div class="kicker gold">WORLD FIRST</div>
+      <h2>Orrun, the Antlered Warden — defeated</h2>
+      <div id="victory-stats" class="stats"></div>
+      <div id="vignette-victory" class="vignette"></div>
+      <div class="press">Enter: keep exploring · R: restart</div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

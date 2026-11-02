@@ -1,0 +1,13 @@
+{
+  "name": "aetherfall-online",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Aetherfall Online — browser vertical slice (HTML5 canvas + vanilla JS, no dependencies)",
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test \"tests/unit/*.test.js\"",
+    "smoke": "node tests/integration/browser-smoke.mjs"
+  },
+  "engines": { "node": ">=18" }
+}
